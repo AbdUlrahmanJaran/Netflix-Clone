@@ -5,7 +5,7 @@ import ModalMovie from './ModalMovie';
 
 export default function Movie({movie}){
     return (
-        <Card key={movie.id} style={{ width: '18rem' }}>
+        <Card key={movie.id}>
             <Card.Img variant="top" src={movie.image} />
             <Card.Body>
                 <Card.Title>{movie.title}</Card.Title>
@@ -16,7 +16,8 @@ export default function Movie({movie}){
                     {movie.overview}
                 </Card.Text>
             </Card.Body>
-            <ModalMovie movies={movie} />
+             <ModalMovie movies={movie} />
         </Card>
+
     )
 }
