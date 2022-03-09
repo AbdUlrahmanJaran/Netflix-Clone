@@ -3,5 +3,5 @@ import React from "react";
 // import NavBar from "./Navbar";
 
 export default function FavList(){
-    return(<h1>g</h1>)
+    return(<h2>Here is favorite movies</h2>)
 }
