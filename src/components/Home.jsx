@@ -1,15 +1,18 @@
-import react from 'react';
 import React, { useState, useEffect } from 'react';
 import MoviesList from './MovieList';
 
 
 export default function Home() {
     const [movies, setMovies] = useState([]);
-
-    async function getData(){
-      let response = await fetch(`${process.env.REACT_APP_SERVER}/`);
+  
+  async function getData(){
+     try {
+      let response = await fetch(`${process.env.REACT_APP_SERVER}/trending`);
       let data = await response.json();
       setMovies(data);
+  } catch (error) {
+    console.log(error)
+  } 
     }
   
     useEffect(()=>{
